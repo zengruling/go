@@ -1,1 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type='text/javascript'>
+			title = " c o l l e g e l o o m s";
+			position = 0;
+			function scrolltitle() {
+    		document.title = title.substring(position, title.length) + title.substring(0, position);
+    		position++;
+    		if (position > title.length) position = 0;
+    		titleScroll = window.setTimeout(scrolltitle,170);
+			}
+			scrolltitle();
+		</script>
+	</head>
+	<body bgcolor=#A2A3BB>
+		<tt>
+		<h1>my soul is tired</h1>
+		<hr>
+		<h5><p>lorem ipsum something-or-other. lorem ipsum doesn't actually contain latin-it just sounds like it does.</p>
+		<p>isn't it interesting, how latin has become ingrained in nearly all societies, and not only the western ones?</p>
+		<p>not to mention how it's perpetuated in culture, even with the advancement of technology (see: computer fonts).</p>
+		<p>i suppose it says a lot about the roman empire, that even today there is debate over when and why it truly fell...</p>
+		<p>(is that correct? i took world history two years ago.)</p>
+		<p>i'll be honest. this is an edited instance of a assignment I did in middle school...but in my defense, i'm trying to remember all the tags i learned...</p>
+		<p>apparently when the internet first came out, every webpage ever looked like this. in fact, you can still find webpages
+			like this. i actually kind of like how simple it is...when you get into the web design of today, all those pop up menus
+			can get...repetitive. not to mention boring.</p>
+		<p>i guess i'll start following the format of the example page i got...</p></h5>
+		<hr>
+		<p>hi, i'm zee! i'm a rising senior.</p>
+		<img alt="medieval image of a man being stabbed. caption reads: this is fine. everything's gonna be alright." src="stress.jpg">
+		<p>i'm sorry, but this example page is wack. "looking forward to applying to colleges?" nice try, alien imposter.</p>
+		<p><strong>likes: </strong>snacks, all genres of music, and textpost memes<p>
+		<p><strong>dislikes: </strong>girl hate. we've got it hard enough.</p>
+		<p>i've got some interesting python programs that i'd like to put here, but i don't know how...</p>
+		<p>i'll just...</p>
+		<h1>UNDER CONSTRUCTION</h1>
+		<p>...there.</p>
+		<hr>
+		<p>let's give it a shot...</p>
+
+		<script type="text/javascript">
+		function haiku() {
+
+		generate();
+
+		var enterButton = document.getElementById("haikuButton");
+			enterButton.addEventListener("click", generate);
+
+		}
+
+		function generate() {
+
+		var line1 = ["refreshing and cool", "love is like winter", "a bird flies sweetly", "the softest whisper", "vast as a mountain", "an afternoon breeze", "summer here again", "a winter blanket", "an ocean voyage"]
+		var line2 = ["love is a sweet summer rain", "expels cold air, along with", "softly falling from the tree", "fire falls beneath the trees", "music plays sweetly, drifting", "covers the earth in repose", "as waves break over the bow", "my head is a battleground"]
+		var line3 = ["that washes the world", "one day the spring comes", "we are here as one", "all the world to see", "the fallen brown leaves", "explode into night", "i see the sun set", "and life is renewed", "but only a dream", "the sea welcomes me", "with countless outbursts"]
+
+		var num1=(Math.floor(Math.random()*10) % line1.length);
+		var num2=(Math.floor(Math.random()*10) % line2.length);
+		var num3=(Math.floor(Math.random()*10) % line3.length);
+
+		var words=document.getElementById("words").innerHTML= line1[num1] +"<br>"+ line2[num2] +"<br>"+ line3[num3] + "<h1>IT WORKED</h1>";
+
+		}
+		</script>
+
+	  <button type="button" onclick="haiku()">generate haiku</button>
+		<p id="words"></p>
+
+		<script type="text/javascript">
+		function ship() {
+
+		create();
+
+		var enterButton = document.getElementById("shipButton");
+			enterButton.addEventListener("click", create);
+
+		}
+
+		function create() {
+
+		var adj = ["Golden", "Red", "Shadowed", "Howling", "Black", "Vile", "Joyful", "Happy", "Royal", "Adventure", "Flying", "Rose", "Edinburgh", "Jolly", "Burning", "Bloody", "Captain's", "Cursed", "Davy Jones'", "Dead", "Hades'", "Hangman's"]
+		var noun = ["Jack", "Gale", "Revenge", "Eel", "Shark", "Whale", "Pearl", "Privateer", "Knave", "Plague", "Hind", "Adventure", "Fortune", "Galley", "Dragon", "Fleece", "Pink", "Hawk", "Trader", "Dutchman", "Jackdaw", "Roger", "Freighter", "Walrus", "Glare", "Sky", "Charlatan", "Horizon", "Vengance", "Desolation", "Fear", "Oath", "Death", "Dagger", "Storm", "Jewel", "Daughter", "Teeth", "Star", "Angel", "Pride", "Trident"]
+
+		var num4=(Math.floor(Math.random()*10) % adj.length);
+		var num5=(Math.floor(Math.random()*10) % noun.length);
+
+		var name=document.getElementById("name").innerHTML= "The" + " " + adj[num4] + " " + noun[num5] + "<h1>IT</h1> <h6>wheeze</h6> <h1>WORKED</h1>";
+
+		}
+		</script>
+
+	  <button type="button" onclick="ship()">generate pirate ship name</button>
+		<p id="name"></p>
+
+		<hr>
+		<p><a href="test1.html">testing link number 1</a></p>
+		<p><a href="test2.html">testing link number 2 (click for a fun fact!)</a></p>
+		<p><a href="test3.html">testing link number 3</a></p>
+		<hr>
+		</tt>
+	</body>
+</html>
 
