@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	<title>Under construction</title>
-	</head>
-	<body bgcolor="#9395D3">
+<head>
+	<script type='text/javascript'>
+		title = "Under construction";
+		position = 0;
+		function scrolltitle() {
+			document.title = title.substring(position, title.length) + title.substring(0, position);
+			position++;
+			if (position > title.length) position = 0;
+			titleScroll = window.setTimeout(scrolltitle, 170);
+		}
+		scrolltitle();
+	</script>
+	<link rel="stylesheet" href="style.css">
+</head>
+	<body>
 		<tt>
-		<h1>Pardon our dust.</h1>
+			<div class="whitebox">
+				<h1>Pardon our dust!</h1>
+			</div>
 		</tt>
 	</body>
 </html>
