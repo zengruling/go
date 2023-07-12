@@ -1,84 +1,92 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<script type='text/javascript'>
-			title = "Welcome to my page!";
-			position = 0;
-			function scrolltitle() {
-    		document.title = title.substring(position, title.length) + title.substring(0, position);
-    		position++;
-    		if (position > title.length) position = 0;
-    		titleScroll = window.setTimeout(scrolltitle,170);
-			}
-			scrolltitle();
-		</script>
-	</head>
-	<body bgcolor=#A2A3BB>
-		<tt>
-			<h2>
-				<p>Hi, my name is Carolyn Zeng! I am currently a rising senior at UIUC majoring in Astronomy with a minor in Computer Science.</p>
-				<a href="Resume.docx">My Resume</a>
+<head>
+	<script type='text/javascript'>
+		title = "Welcome to my page!";
+		position = 0;
+		function scrolltitle() {
+			document.title = title.substring(position, title.length) + title.substring(0, position);
+			position++;
+			if (position > title.length) position = 0;
+			titleScroll = window.setTimeout(scrolltitle, 170);
+		}
+		scrolltitle();
+	</script>
+</head>
+<style>
+	body {
+		background-image: url('vangogh.jpg');
+	}
+</style>
+<body>
+	<tt>
+		<h2>
+			<p>Hi, my name is Carolyn Zeng! I am currently a rising senior at UIUC majoring in Astronomy with a minor in Computer Science.</p>
+			<a href="Resume.docx">My Resume</a>
+			<a href="">Projects</a>
+			<a href="">Portfolio</a>
+			<a href="">Blog</a>
+			<a href="">Contact</a>
 
-				<p>Some random Javascript:</p>
+			<p>Some random Javascript:</p>
 
-				<script type="text/javascript">
-					function haiku() {
+			<script type="text/javascript">
+				function haiku() {
 
-						generate();
+					generate();
 
-						var enterButton = document.getElementById("haikuButton");
-						enterButton.addEventListener("click", generate);
+					var enterButton = document.getElementById("haikuButton");
+					enterButton.addEventListener("click", generate);
 
-					}
+				}
 
-					function generate() {
+				function generate() {
 
-						var line1 = ["refreshing and cool", "love is like winter", "a bird flies sweetly", "the softest whisper", "vast as a mountain", "an afternoon breeze", "summer here again", "a winter blanket", "an ocean voyage"]
-						var line2 = ["love is a sweet summer rain", "expels cold air, along with", "softly falling from the tree", "fire falls beneath the trees", "music plays sweetly, drifting", "covers the earth in repose", "as waves break over the bow", "my head is a battleground"]
-						var line3 = ["that washes the world", "one day the spring comes", "we are here as one", "all the world to see", "the fallen brown leaves", "explode into night", "i see the sun set", "and life is renewed", "but only a dream", "the sea welcomes me", "with countless outbursts"]
+					var line1 = ["refreshing and cool", "love is like winter", "a bird flies sweetly", "the softest whisper", "vast as a mountain", "an afternoon breeze", "summer here again", "a winter blanket", "an ocean voyage"]
+					var line2 = ["love is a sweet summer rain", "expels cold air, along with", "softly falling from the tree", "fire falls beneath the trees", "music plays sweetly, drifting", "covers the earth in repose", "as waves break over the bow", "my head is a battleground"]
+					var line3 = ["that washes the world", "one day the spring comes", "we are here as one", "all the world to see", "the fallen brown leaves", "explode into night", "i see the sun set", "and life is renewed", "but only a dream", "the sea welcomes me", "with countless outbursts"]
 
-						var num1 = (Math.floor(Math.random() * 10) % line1.length);
-						var num2 = (Math.floor(Math.random() * 10) % line2.length);
-						var num3 = (Math.floor(Math.random() * 10) % line3.length);
+					var num1 = (Math.floor(Math.random() * 10) % line1.length);
+					var num2 = (Math.floor(Math.random() * 10) % line2.length);
+					var num3 = (Math.floor(Math.random() * 10) % line3.length);
 
-						var words = document.getElementById("words").innerHTML = line1[num1] + "<br>" + line2[num2] + "<br>" + line3[num3];
+					var words = document.getElementById("words").innerHTML = line1[num1] + "<br>" + line2[num2] + "<br>" + line3[num3];
 
-					}
-				</script>
+				}
+			</script>
 
-				<button type="button" onclick="haiku()">generate haiku</button>
-				<p id="words"></p>
+			<button type="button" onclick="haiku()">generate haiku</button>
+			<p id="words"></p>
 
-				<script type="text/javascript">
-					function ship() {
+			<script type="text/javascript">
+				function ship() {
 
-						create();
+					create();
 
-						var enterButton = document.getElementById("shipButton");
-						enterButton.addEventListener("click", create);
+					var enterButton = document.getElementById("shipButton");
+					enterButton.addEventListener("click", create);
 
-					}
+				}
 
-					function create() {
+				function create() {
 
-						var adj = ["Golden", "Red", "Shadowed", "Howling", "Black", "Vile", "Joyful", "Happy", "Royal", "Adventure", "Flying", "Rose", "Edinburgh", "Jolly", "Burning", "Bloody", "Captain's", "Cursed", "Davy Jones'", "Dead", "Hades'", "Hangman's"]
-						var noun = ["Jack", "Gale", "Revenge", "Eel", "Shark", "Whale", "Pearl", "Privateer", "Knave", "Plague", "Hind", "Adventure", "Fortune", "Galley", "Dragon", "Fleece", "Pink", "Hawk", "Trader", "Dutchman", "Jackdaw", "Roger", "Freighter", "Walrus", "Glare", "Sky", "Charlatan", "Horizon", "Vengance", "Desolation", "Fear", "Oath", "Death", "Dagger", "Storm", "Jewel", "Daughter", "Teeth", "Star", "Angel", "Pride", "Trident"]
+					var adj = ["Golden", "Red", "Shadowed", "Howling", "Black", "Vile", "Joyful", "Happy", "Royal", "Adventure", "Flying", "Rose", "Edinburgh", "Jolly", "Burning", "Bloody", "Captain's", "Cursed", "Davy Jones'", "Dead", "Hades'", "Hangman's"]
+					var noun = ["Jack", "Gale", "Revenge", "Eel", "Shark", "Whale", "Pearl", "Privateer", "Knave", "Plague", "Hind", "Adventure", "Fortune", "Galley", "Dragon", "Fleece", "Pink", "Hawk", "Trader", "Dutchman", "Jackdaw", "Roger", "Freighter", "Walrus", "Glare", "Sky", "Charlatan", "Horizon", "Vengance", "Desolation", "Fear", "Oath", "Death", "Dagger", "Storm", "Jewel", "Daughter", "Teeth", "Star", "Angel", "Pride", "Trident"]
 
-						var num4 = (Math.floor(Math.random() * 10) % adj.length);
-						var num5 = (Math.floor(Math.random() * 10) % noun.length);
+					var num4 = (Math.floor(Math.random() * 10) % adj.length);
+					var num5 = (Math.floor(Math.random() * 10) % noun.length);
 
-						var name = document.getElementById("name").innerHTML = "The" + " " + adj[num4] + " " + noun[num5];
-					}
-				</script>
+					var name = document.getElementById("name").innerHTML = "The" + " " + adj[num4] + " " + noun[num5];
+				}
+			</script>
 
-				<button type="button" onclick="ship()">generate pirate ship name</button>
-				<p id="name"></p>
+			<button type="button" onclick="ship()">generate pirate ship name</button>
+			<p id="name"></p>
 
-				<hr>
-				<p><a href="test2.html">testing link number 2 (click for a fun fact!)</a></p>
-			</h2>
+			<hr>
+		</h2>
 		<hr>
-		</tt>
-	</body>
+	</tt>
+</body>
 </html>
 
