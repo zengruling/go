@@ -1,5 +1,5 @@
 body {
-	    background-image: url('vangogh.jpg');
+	    background-image: url('./images/vangogh.jpg');
 		text-align: center;
 	}
 .whitebox {
