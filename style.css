@@ -2,11 +2,6 @@ body {
 	    background-image: url('vangogh.jpg');
 		text-align: center;
 	}
-img {
-	border-radius: 50%;
-	height: 300px;
-	width: 300px;
-}
 .whitebox {
 	background-color: white;
 	margin: auto;
