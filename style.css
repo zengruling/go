@@ -2,12 +2,14 @@ body {
 	    background-image: url('vangogh.jpg');
 		text-align: center;
 	}
+img {
+	border-radius: 50%;
+	height: 300px;
+	width: 300px;
+}
 .whitebox {
 	background-color: white;
-	position: absolute;
-	top: 50%;
-	left: 3%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
+	margin: auto;
+	width: 1200px;
 	padding: 10px;
 }
