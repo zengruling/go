@@ -19,17 +19,23 @@
 		<div class="whitebox">
 			<h2>
 				<img src="./images/profile.jpg" style="border-radius:50%;height:300px;width:300px;">
-				<p>Hi, my name is Carolyn Zeng! </p>
-				<p>I am currently a rising senior at UIUC majoring in Astronomy with a minor in Computer Science. </p>
-				<p>I'm looking to apply to graduate school for a PhD in Astronomy this Fall.</p>
+				<p>Hi, my name is Carolyn Zeng!</p>
+				<p>I am currently a rising senior at UIUC majoring in Astronomy with a minor in Computer Science.</p>
+				<p>
+					I find astronomy very engaging as a field with a very long history intertwined with mythology and yet with new discoveries all the time.
+					<br />I'm looking to apply to graduate school for a PhD in Astronomy this Fall.
+				</p>
 				<p>My interests are in planet and galaxy formation and computer science applications to astronomy such as simulations and software.</p>
+				<p>My skills include coding knowledge of Python, HTML, CSS, Java, Javascript, JSON, and C++.</p>
+				<p>I am fluent in English and Mandarin Chinese and at an intermediate level in German.</p>
 				<p><a href="Resume.docx">My Resume</a></p>
+				<p><a href="">Personal Statement (Under construction)</a></p>
 				<p><a href="projects.html">Projects</a></p>
 				<p><a href="portfolio.html">Portfolio</a></p>
 				<p><a href="blog.html">Blog</a></p>
 				<p><a href="contact.html">Contact</a></p>
-		
-				<p>Some random Javascript:</p>
+
+				<p>Some random Javascript I made (click the buttons):</p>
 
 				<script type="text/javascript">
 					function haiku() {
@@ -54,28 +60,28 @@
 				<p id="words"></p>
 
 				<script type="text/javascript">
-				function ship() {
+					function ship() {
 
-					create();
+						create();
 
-					var enterButton = document.getElementById("shipButton");
-					enterButton.addEventListener("click", create);
+						var enterButton = document.getElementById("shipButton");
+						enterButton.addEventListener("click", create);
 
-				}
+					}
 
-				function create() {
+					function create() {
 
-					var adj = ["Golden", "Red", "Shadowed", "Howling", "Black", "Vile", "Joyful", "Happy", "Royal", "Adventure", "Flying", "Rose", "Edinburgh", "Jolly", "Burning", "Bloody", "Captain's", "Cursed", "Davy Jones'", "Dead", "Hades'", "Hangman's"]
-					var noun = ["Jack", "Gale", "Revenge", "Eel", "Shark", "Whale", "Pearl", "Privateer", "Knave", "Plague", "Hind", "Adventure", "Fortune", "Galley", "Dragon", "Fleece", "Pink", "Hawk", "Trader", "Dutchman", "Jackdaw", "Roger", "Freighter", "Walrus", "Glare", "Sky", "Charlatan", "Horizon", "Vengance", "Desolation", "Fear", "Oath", "Death", "Dagger", "Storm", "Jewel", "Daughter", "Teeth", "Star", "Angel", "Pride", "Trident"]
+						var adj = ["Golden", "Red", "Shadowed", "Howling", "Black", "Vile", "Joyful", "Happy", "Royal", "Adventure", "Flying", "Rose", "Edinburgh", "Jolly", "Burning", "Bloody", "Captain's", "Cursed", "Davy Jones'", "Dead", "Hades'", "Hangman's"]
+						var noun = ["Jack", "Gale", "Revenge", "Eel", "Shark", "Whale", "Pearl", "Privateer", "Knave", "Plague", "Hind", "Adventure", "Fortune", "Galley", "Dragon", "Fleece", "Pink", "Hawk", "Trader", "Dutchman", "Jackdaw", "Roger", "Freighter", "Walrus", "Glare", "Sky", "Charlatan", "Horizon", "Vengance", "Desolation", "Fear", "Oath", "Death", "Dagger", "Storm", "Jewel", "Daughter", "Teeth", "Star", "Angel", "Pride", "Trident"]
 
-					var num4 = (Math.floor(Math.random() * 10) % adj.length);
-					var num5 = (Math.floor(Math.random() * 10) % noun.length);
+						var num4 = (Math.floor(Math.random() * 10) % adj.length);
+						var num5 = (Math.floor(Math.random() * 10) % noun.length);
 
-					var name = document.getElementById("name").innerHTML = "The" + " " + adj[num4] + " " + noun[num5];
-				}
-			</script>
-			<button type="button" onclick="ship()">Generate a pirate ship name!</button>
-			<p id="name"></p>
+						var name = document.getElementById("name").innerHTML = "The" + " " + adj[num4] + " " + noun[num5];
+					}
+				</script>
+				<button type="button" onclick="ship()">Generate a pirate ship name!</button>
+				<p id="name"></p>
 			</h2>
 		</div>
 	</tt>
