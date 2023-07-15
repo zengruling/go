@@ -8,3 +8,12 @@ body {
 	width: 1200px;
 	padding: 10px;
 }
+.profile_image{
+	border-radius:50%;
+	height:300px;
+	width:300px;
+}
+.text_type {
+	font-family:Andale Mono, monospace;
+	font-weight:bold
+}

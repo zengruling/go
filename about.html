@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type='text/javascript'>
+		title = "Blog ";
+		position = 0;
+		function scrolltitle() {
+			document.title = title.substring(position, title.length) + title.substring(0, position);
+			position++;
+			if (position > title.length) position = 0;
+			titleScroll = window.setTimeout(scrolltitle, 170);
+		}
+		scrolltitle();
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <tt>
+        <div class="whitebox">
+            <h3><a href="index.html">Back to homepage</a></h3>
+            <h2>
+                <p>I am currently a rising senior at UIUC majoring in Astronomy with a minor in Computer Science.</p>
+                <p>
+                    I find astronomy very engaging as a field with a very long history intertwined with mythology and yet with new discoveries all the time.
+                    <br />I'm looking to apply to graduate school for a PhD in Astronomy this Fall.
+                </p>
+                <p>My interests are in planet and galaxy formation and computer science applications to astronomy such as simulations and software.</p>
+                <p>My skills include coding knowledge of Python, HTML, CSS, Java, Javascript, JSON, and C++.</p>
+                <p>I am fluent in English and Mandarin Chinese and at an intermediate level in German.</p>
+            </h2>
+        </div>
+    </tt>
+</body>
+</html>
