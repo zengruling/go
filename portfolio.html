@@ -40,22 +40,44 @@
 			<h2>Drawings</h2>
 			<img src="./images/fox.jpg" width="300" alt="chibi anime style drawing of girl with fox ears and tail jumping color pencils"/><img src="./images/fairy.jpg" width="300" alt="drawing of fairy in white clothes color pencils"/>
 			<h2>Sock Dolls</h2>
-			<img src="./images/horse.jpg" width="300" alt="stuffed doll made of striped socks brown black blue button eyes tongue sticking out"/>
-			<p class="text_type">First time sewing, made in middle school during a trip to China.</p>
-			<img src="./images/pig.jpg" width="300" alt="green purple pig doll made of spotted socks button nose"/>
-			<p class="text_type">Second time sewing.</p>
-			<img src="./images/bunny.jpg" width="300" alt="yellow rabbit doll made of flower pattern socks in windowsill eyes closed smiling"/>
-			<p class="text_type">Made for a younger cousin when she came to visit from China.</p>
-			<img src="./images/lion.jpg" width="300" alt="yellow lion doll yarn mane"/>
-			<p class="text_type">Given to a friend as a birthday gift.</p>
-			<img src="./images/hippo.jpg" width="300" alt="white hippo doll black eyes big nose striped red white blue black sweater"/>
-			<p class="text_type">Made for my younger brother.</p>
-			<img src="./images/cat.jpg" width="300" alt="red white pink maneki neko doll made of striped socks"/>
-			<p class="text_type">Made for a childhood friend as a moving gift.</p>
+			<div id="slider">
+			<div class="slide"><img src="./images/horse.jpg" width="300" alt="A horse. My first time sewing."/></div>
+			<div class="slide"><img src="./images/pig.jpg" width="300" alt="A pig"/></div>
+			<div class="slide"><img src="./images/bunny.jpg" width="300" alt="Rabbit made for my cousin."/></div>
+			<div class="slide"><img src="./images/lion.jpg" width="300" alt="Lion made for a friend."/></div>
+			<div class="slide"><img src="./images/hippo.jpg" width="300" alt="Hippo made for my brother."/></div>
+			<div class="slide"><img src="./images/cat.jpg" width="300" alt="Maneki Neko made for a childhood friend moving away."/></div>
+			</div>
+			<button type="button" class="text_type" onclick="changeSlides(-1);">❮</button><div id="caption"> </div><button type="button" class="text_type" onclick="changeSlides(1);">❯</button>
 			<p>Patterns from: <a href="https://www.amazon.com/Stray-Sock-Sewing-Making-Creatures/dp/1600611990/ref=sr_1_1?crid=3DMVUPQN3HZG2&keywords=stray+sock+sewing&qid=1690513113&s=books&sprefix=stray+sock+sewing%2Cstripbooks%2C112&sr=1-1"><i>Stray Sock Sewing</i> by Daniel <img src="./images/sock.jpg" width="50" alt="cover of stray sock sewing book by Daniel"/></a></p>
 			<h2>Needle Felting</h2>
 			<img src="./images/giraffe.jpg" width="300" alt="needle-felted cartoon giraffe"/>
 		</div>
 	</tt>
+	<script type="text/javascript">
+		let index = 0;
+		const slides = document.querySelectorAll(".slide");
+
+		function showSlide(n) {
+			  slides.forEach((slide, i) => {
+				slide.style.display = i === n ? "block" : "none";
+			  });
+			  showCaption(n);
+		}	
+
+		function changeSlides(n) {
+			  index += n;
+			  if (index >= slides.length) index = 0;
+			  if (index < 0) index = slides.length - 1;
+			  showSlide(index);
+			  showCaption(index);
+		}
+
+		function showCaption(n) {
+			document.getElementById("caption").innerHTML = slides[index].childNodes[0].alt;
+		}
+
+		showSlide(index);
+	</script>
 </body>
 </html>
