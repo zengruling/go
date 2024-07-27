@@ -17,3 +17,11 @@ body {
 	font-family:Andale Mono, monospace;
 	font-weight:bold
 }
+
+#slider {
+	overflow: hidden;
+}
+
+.slide {
+  	float: center;
+}

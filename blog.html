@@ -19,6 +19,27 @@
 		<div class="whitebox">
 			<h3><a href="index.html">Back to homepage</a></h3>
 			<h1>Here I will talk about what I'm up to every month.</h1>
+			<h2><p>7/26/2024</p></h2>
+			<h3>
+			<p>
+				Visited the Chicago Art Institute yesterday on one of their free evenings. My favorite exhibit is the Arms and Armory. The arrangement of the objects
+				really conveyed the scale and intricacy of everything and the atmosphere of a European noble's armory. I especially liked the polearms.
+			</p>
+			<div id="slider">
+				<div class="slide"><img src="./images/arms1.jpg" width="500" alt="1/10 ~1600 Italian Infantry Armor"/></div>
+				<div class="slide"><img src="./images/arms2.jpg" width="500" alt="2/10 Assortment of hunting weapons"/></div>
+				<div class="slide"><img src="./images/arms3.jpg" width="500" alt="3/10 1520 Field armor, including horse"/></div>
+				<div class="slide"><img src="./images/arms4.jpg" width="500" alt="4/10 Various rapiers"/></div>
+				<div class="slide"><img src="./images/arms5.jpg" width="500" alt="5/10 Flintlock pistol"/></div>
+				<div class="slide"><img src="./images/arms6.jpg" width="500" alt="6/10 Pair of pistols"/></div>
+				<div class="slide"><img src="./images/arms7.jpg" width="500" alt="7/10 Carving implements"/></div>
+				<div class="slide"><img src="./images/arms8.jpg" width="500" alt="8/10 Polearms and armor"/></div>
+				<div class="slide"><img src="./images/arms9.jpg" width="500" alt="9/10 Pistol of King Louis XIII"/></div>
+				<div class="slide"><img src="./images/arms10.jpg" width="500" alt="10/10 Assorted arms and armor"/></div>
+			</div>
+			<button type="button" class="text_type" onclick="changeSlides(-1);">❮</button><div id="caption"> </div><button type="button" class="text_type" onclick="changeSlides(1);">❯</button>
+			</h3>
+			<hr>
 			<h2><p>6/21/2024</p></h2>
 			<h3>
 			<p>I'm continuing to work on skills and find something to do in what looks like is going to be a gap year. Right now I'm thinking of joining the workforce before considering whether to continue
@@ -264,5 +285,30 @@
 			</h3>
 		</div>
 	</tt>
+	<script type="text/javascript">
+		let index = 0;
+		const slides = document.querySelectorAll(".slide");
+
+		function showSlide(n) {
+			  slides.forEach((slide, i) => {
+				slide.style.display = i === n ? "block" : "none";
+			  });
+			  showCaption(n);
+		}	
+
+		function changeSlides(n) {
+			  index += n;
+			  if (index >= slides.length) index = 0;
+			  if (index < 0) index = slides.length - 1;
+			  showSlide(index);
+			  showCaption(index);
+		}
+
+		function showCaption(n) {
+			document.getElementById("caption").innerHTML = slides[index].childNodes[0].alt;
+		}
+
+		showSlide(index);
+	</script>
 </body>
 </html>
